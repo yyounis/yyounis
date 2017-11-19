@@ -15,6 +15,13 @@
 
 #'Ctrl + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
+sampleX <- function(f, lower_bound, upper_bound, interval = 0.01) {
+ return(data.frame(x = seq(lower_bound, upper_bound, interval), y = f(x)))
 }
+
+gx <- function(x){return(4*x)}
+sampleX(f = gx(x), lower_bound = 0, upper_bound = sqrt(.5))
+
+
+
+
