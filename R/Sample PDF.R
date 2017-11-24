@@ -4,10 +4,15 @@
 #' @param lower_bound provided by user for closed specific sample
 #' @param upper_bound provided by user for closed specific sample
 #' @param interval Default value provided but can be altered if necessary
+#' @example gx <- function(x){return(4*x)}
+##SpecificSample <- mutate(data.frame(x = seq(0, sqrt(.5), .01)), y = gx(x))
+##max_c(0, sqrt(.5), y = 4*x)
+##ApproveReject(0, sqrt(.5), y = gx(x))
+##head(Replication(0, sqrt(.5), y = gx(x)))
 #' @import dplyr
 #' @return Specific Rejection Sample from provided PDF with given Lower/Upper Bounds
 #'
-#' @export
+#' @export Replication
 
 #Function Provides 1 Sample from PDF
 sampleX <- function(f, lower_bound, upper_bound, interval = 0.01) {
@@ -25,24 +30,15 @@ return(C)}
 #Function to check if sample falls within range
 ApproveReject <- function(lower_bound, upper_bound, y = gx){
 PotentialSample <- runif(1, lower_bound, upper_bound)
-Result <- ifelse(runif(1, 0, max_c(lower_bound, upper_bound, y = gx)) < gx(PotentialSample), PotentialSample, NA)
+Result <- ifelse(runif(1, lower_bound, max_c(lower_bound, upper_bound, y = gx)) < gx(PotentialSample), PotentialSample, NA)
 return(Result)}
 
-
-#---------------------------------------------------------------------
-
-#Specific Example
-gx <- function(x){return(4*x)}
-SpecificSample <- mutate(data.frame(x = seq(0, sqrt(.5), .01)), y = gx(x))
-
-max_c(0, sqrt(.5), y = 4*x)
-
-ApproveReject(0, sqrt(.5), y = gx(x))
-
-
-library (dplyr)
-install.packages("dplyr")
-
-
+#Replicating Large Function
+Replication <- function(lower_bound, upper_bound, y = gx, Rep = 10000){
+PotentialSample <- runif(1, lower_bound, upper_bound)
+Result <- ifelse(runif(1, lower_bound, max_c(lower_bound, upper_bound, y = gx)) < gx(PotentialSample), PotentialSample, NA)
+BigSample <- data.frame(x = replicate(Rep, {PotentialSample <- runif(1, lower_bound, upper_bound);
+ifelse(runif(1, lower_bound, max_c(lower_bound, upper_bound, y = gx)) < gx(PotentialSample), PotentialSample, NA)}))
+return(BigSample)}
 
 
