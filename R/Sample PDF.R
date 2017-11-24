@@ -10,7 +10,7 @@
 ##ApproveReject(0, sqrt(.5), y = gx(x))
 ##head(Replication(0, sqrt(.5), y = gx(x)))
 #' @import dplyr
-#' @return Specific Rejection Sample from provided PDF with given Lower/Upper Bounds
+#' @return BigSample data frame for provided PDF
 #'
 #' @export Replication
 
