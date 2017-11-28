@@ -13,8 +13,9 @@
 #' @export
 
 
-SampleJDF <- function(lower_boundx, lower_boundy, upper_boundx, upper_boundy, lower_boundJDF, upper_boundJDF, y = f(x), Rep = 10000){
-SamData <- replicate(Rep, {pSx <- runif(1, lower_boundx, upper_boundx); pSy <- runif(1, lower_boundy, upper_boundy); if(runif(1,lower_boundJDF, upper_boundJDF) < SampleJDF(x = pSx, y = pSy)) {c(x = pSx, y = pSy)} else c(x = NA,y = NA)})
+SampleJDF <- function(lower_boundx, lower_boundy, upper_boundx, upper_boundy, lower_boundJDF, upper_boundJDF, f = f, Rep = 10000){
+  
+SamData <- replicate(Rep, {pSx <- runif(1, lower_boundx, upper_boundx); pSy <- runif(1, lower_boundy, upper_boundy); if(runif(1,lower_boundJDF, upper_boundJDF) < f(x = pSx, y = pSy)) {c(x = pSx, y = pSy)} else c(x = NA,y = NA)})
 SamData <- data.frame(t(SamData))
 return(SamData)
 }
