@@ -1,3 +1,4 @@
+#' @title SamplePDF
 #' @author Youssef Younis  <email: youssef.younis@slu.edu>
 #' @description This file aims to produce a sample from a given pdf
 #' @param f should be provided by user
@@ -11,6 +12,7 @@
 #' head(Replication(0, sqrt(.5), y = gx(x)))
 #' @import dplyr
 #' @return BigSample data frame for provided PDF
+#'
 #'
 #' @export Replication
 
