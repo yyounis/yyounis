@@ -4,11 +4,11 @@
 #' @param lower_bound provided by user for closed specific sample
 #' @param upper_bound provided by user for closed specific sample
 #' @param interval Default value provided but can be altered if necessary
-#' @example gx <- function(x){return(4*x)}
-##SpecificSample <- mutate(data.frame(x = seq(0, sqrt(.5), .01)), y = gx(x))
-##max_c(0, sqrt(.5), y = 4*x)
-##ApproveReject(0, sqrt(.5), y = gx(x))
-##head(Replication(0, sqrt(.5), y = gx(x)))
+#' @example \dontrun{gx <- function(x){return(4*x)}
+SpecificSample <- mutate(data.frame(x = seq(0, sqrt(.5), .01)), y = gx(x))
+max_c(0, sqrt(.5), y = 4*x)
+ApproveReject(0, sqrt(.5), y = gx(x))
+head(Replication(0, sqrt(.5), y = gx(x)))}
 #' @import dplyr
 #' @return BigSample data frame for provided PDF
 #'
