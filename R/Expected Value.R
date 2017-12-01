@@ -8,4 +8,4 @@
 #' @return An Expected Value of a g(x) or g(x,y)
 #'
 #' @export
-ExpectValue <- function(x){return(x)}
+
