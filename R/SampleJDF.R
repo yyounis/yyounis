@@ -8,6 +8,7 @@
 #' @param upper_boundx provided by user to calculate maximum boundary of "X"
 #' @param upper_boundy provided by user to calculate maximum boundary of "Y"
 #' @param upper_boundJDF provided by user to calculate maximum boundary of "JDF"
+#' @param Rep the amount of replication times the user wants, default value is 10000
 #' @examples gx = function(x,y){
 #' return (x+y)}
 #' SampleJDF(0, 0, 1, 1, 0, 2, gx)

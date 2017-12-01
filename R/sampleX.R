@@ -5,6 +5,7 @@
 #' @param lower_bound provided by user for closed specific sample
 #' @param upper_bound provided by user for closed specific sample
 #' @param interval Default value provided but can be altered if necessary
+#' @param Rep the amount of replication times the user wants, default value is 10000
 #' @examples gx <- function(x){return(4*x)}
 #' SpecificSample <- mutate(data.frame(x = seq(0, sqrt(.5), .01)), y = gx(x))
 #' max_c(0, sqrt(.5), y = 4*x)
