@@ -22,6 +22,17 @@ The Rejection Sample Package calculates you the following:
 - Compute the expected value of $f(X)$ or $f(X,Y)$ given a function $f()$.
 - Compute probabilities related to $X$ or $X$ and $Y$.
 
+This package was developed as a optional project for a required Probability Theory course 4800 Probability Theory. This course is taught at Saint Louis University by Dr. Darren Speegle <speegled@slu.edu>.
+
+
+##Section A) Sample from $X$ given its probability density function
+
+The initial section to the project focuses on receiving a random sample from a probability density function utilizing rejection sampling. Here you must provide us with the following parameters:
+
+- The probability density function for your desired variable
+- The upper and lower bounds of your probability density function
+
+
 ## Vignette Info
 
 Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
