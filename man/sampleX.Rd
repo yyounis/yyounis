@@ -14,6 +14,8 @@ sampleX(f, lower_bound, upper_bound, interval = 0.01)
 \item{upper_bound}{provided by user for closed specific sample}
 
 \item{interval}{Default value provided but can be altered if necessary}
+
+\item{Rep}{the amount of replication times the user wants, default value is 10000}
 }
 \value{
 BigSample data frame for provided PDF

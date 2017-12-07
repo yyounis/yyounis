@@ -32,7 +32,25 @@ The initial section to the project focuses on receiving a random sample from a p
 - The probability density function for your desired variable
 - The upper and lower bounds of your probability density function
 
+```{r}
+set.seed(123)
+library(dplyr)
+gx <- function(x){return(4*x)}
+SpecificSample <- mutate(data.frame( x = seq(0, sqrt(.5), .01)), y = gx(x))
+max_c(0, sqrt(.5), y = 4*x)
+```
 
+Here the function provided calculates the maximum value that is set higher than the maximum value of the probability.
+
+```{r}
+ApproveReject(0, sqrt(.5), y = gx(x))
+```
+
+```{r}
+head(Replication(0, sqrt(.5), y = gx(x))) %>% rename("Random Sample" = "x")
+```
+
+The utilization of head allows you to take the first few samples after replication. 
 ## Vignette Info
 
 Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.

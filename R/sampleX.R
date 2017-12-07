@@ -15,7 +15,6 @@
 #' @return BigSample data frame for provided PDF
 #'
 #'
-#' @export Replication
 
 #Function Provides 1 Sample from PDF
 sampleX <- function(f, lower_bound, upper_bound, interval = 0.01) {
@@ -31,12 +30,13 @@ C <- max(Y) + 10
 return(C)}
 
 #Function to check if sample falls within range
+#' @export
 ApproveReject <- function(lower_bound, upper_bound, y = gx){
 PotentialSample <- runif(1, lower_bound, upper_bound)
 Result <- ifelse(runif(1, lower_bound, max_c(lower_bound, upper_bound, y = gx)) < gx(PotentialSample), PotentialSample, NA)
 return(Result)}
 
-#Replicating Large Function
+#' @export
 Replication <- function(lower_bound, upper_bound, y = gx, Rep = 10000){
 PotentialSample <- runif(1, lower_bound, upper_bound)
 Result <- ifelse(runif(1, lower_bound, max_c(lower_bound, upper_bound, y = gx)) < gx(PotentialSample), PotentialSample, NA)
