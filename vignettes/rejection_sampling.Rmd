@@ -118,6 +118,12 @@ f = function(x) {return(4*x)}
 Prob(f, variable = "X", upper_boundx = .5, upper_boundP = .3, lower_boundx = 0, lower_boundP = 0, Rep = 10000)
 ```
 
-The provided example above shows a basic probability computation with given boundaries, replication, and probability density function.
+The provided example above shows a basic probability computation with given boundaries, varible, replication, and probability density function.
 
+```{r}
+f = function(x) {return(1/2/pi *(sin(x) + 1))}
+Prob(f, variable = "X", upper_boundx = 2*pi, lower_boundP = pi, lower_boundx = 0, Rep = 10000)
+```
+
+The provided example above shows another probability computation; however, it demonstrates computating a probability with a sin function.
 
