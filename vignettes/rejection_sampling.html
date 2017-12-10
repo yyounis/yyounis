@@ -147,8 +147,23 @@ SpecificSample &lt;-<span class="st"> </span><span class="kw">mutate</span>(<spa
 <h2>Section C) Compute the expected value of <span class="math inline">\(f(X)\)</span> or <span class="math inline">\(f(X,Y)\)</span> given a function <span class="math inline">\(f()\)</span>.</h2>
 <p>The third section of the project focuses on producing an expected outcome for either a probability density function or a joint density function. Here you must provide us with the following parameters:</p>
 <ul>
-<li></li>
+<li>User provided joint density function or probability function</li>
+<li>Desired Variables whether it be the character of <span class="math inline">\(X\)</span> or <span class="math inline">\(XY\)</span></li>
+<li>Upper and lower boundaries for provided function and variables</li>
+<li>Numerical Value for desired amount of replication</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f =<span class="st"> </span>function(x) {<span class="kw">return</span>(<span class="dv">2</span>*x)}
+<span class="kw">ExpectedValue</span>(f, <span class="st">&quot;X&quot;</span>, <span class="dt">lower_boundx =</span> <span class="dv">0</span>, <span class="dt">upper_boundx =</span> <span class="dv">1</span>)</code></pre></div>
+<pre><code>## [1] 0.6696988</code></pre>
+<p>The provided example above demonstrates the expected outcome for a probabilty density function with the desired variable <span class="math inline">\(x\)</span>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f =<span class="st"> </span>function(x) {<span class="kw">return</span>(<span class="dv">1</span>/<span class="dv">2</span>/pi *(<span class="kw">sin</span>(x) +<span class="st"> </span><span class="dv">1</span>))}
+<span class="kw">ExpectedValue</span>(f, <span class="st">&quot;X&quot;</span>, <span class="dt">lower_boundx =</span> <span class="dv">0</span>, <span class="dt">upper_boundx =</span> <span class="dv">2</span>*<span class="st"> </span>pi)</code></pre></div>
+<pre><code>## [1] 2.344576</code></pre>
+<p>The example above is similar to the first example provided in this section; however, it demonstrates computing an expected value with a sin function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f =<span class="st"> </span>function(x,y) {<span class="kw">return</span>(x+y)}
+<span class="kw">ExpectedValue</span>(f, <span class="dt">variable =</span> <span class="st">&quot;XY&quot;</span>, <span class="dt">upper_boundx =</span> <span class="dv">1</span>, <span class="dt">upper_boundy =</span> <span class="dv">1</span>, <span class="dt">upper_boundF =</span> <span class="dv">2</span>, <span class="dt">lower_boundx =</span> <span class="dv">0</span>, <span class="dt">lower_boundy =</span> <span class="dv">0</span>, <span class="dt">lower_boundF =</span> <span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] 1.175965</code></pre>
+<p>The final example provided shows the function computing the expected outcome for a joint density function.</p>
 </div>
 
 

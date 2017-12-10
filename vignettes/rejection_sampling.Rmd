@@ -32,9 +32,10 @@ The initial section to the project focuses on receiving a random sample from a p
 - The probability density function for your desired variable
 - The upper and lower bounds of your probability density function
 
-```{r}
+```{r, include=FALSE}
 set.seed(123)
 library(dplyr)
+library(Project4800)
 gx <- function(x){return(4*x)}
 SpecificSample <- mutate(data.frame( x = seq(0, sqrt(.5), .01)), y = gx(x))
 max_c(0, sqrt(.5), y = 4*x)
