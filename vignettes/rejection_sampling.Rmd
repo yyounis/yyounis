@@ -51,6 +51,12 @@ head(Replication(0, sqrt(.5), y = gx(x))) %>% rename("Random Sample" = "x")
 ```
 
 The utilization of head allows you to take the first few samples after replication. 
+
+##Section B) Sample from ($X$,$Y$) given the joint density function
+
+The second section of this project focuses on receiving a random sample from a joint density function. Here you must provide the following:
+
+
 ## Vignette Info
 
 Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.

@@ -12,7 +12,7 @@
 
 <meta name="author" content="Youssef Younis youssef.younis@slu.edu" />
 
-<meta name="date" content="2017-12-07" />
+<meta name="date" content="2017-12-10" />
 
 <title>Rejection Sample Package</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Rejection Sample Package</h1>
 <h4 class="author"><em>Youssef Younis <a href="mailto:youssef.younis@slu.edu">youssef.younis@slu.edu</a></em></h4>
-<h4 class="date"><em>2017-12-07</em></h4>
+<h4 class="date"><em>2017-12-10</em></h4>
 
 
 
@@ -96,21 +96,32 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>The upper and lower bounds of your probability density function</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">123</span>)
-gx &lt;-<span class="st"> </span>function(x){<span class="kw">return</span>(<span class="dv">4</span>*x)}
-SpecificSample &lt;-<span class="st"> </span>dplyr::<span class="kw">mutate</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="kw">sqrt</span>(.<span class="dv">5</span>), .<span class="dv">01</span>)), <span class="dt">y =</span> <span class="kw">gx</span>(x))</code></pre></div>
+<span class="kw">library</span>(dplyr)</code></pre></div>
+<pre><code>## Warning: package 'dplyr' was built under R version 3.4.2</code></pre>
+<pre><code>## 
+## Attaching package: 'dplyr'</code></pre>
+<pre><code>## The following objects are masked from 'package:stats':
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gx &lt;-<span class="st"> </span>function(x){<span class="kw">return</span>(<span class="dv">4</span>*x)}
+SpecificSample &lt;-<span class="st"> </span><span class="kw">mutate</span>(<span class="kw">data.frame</span>( <span class="dt">x =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="kw">sqrt</span>(.<span class="dv">5</span>), .<span class="dv">01</span>)), <span class="dt">y =</span> <span class="kw">gx</span>(x))</code></pre></div>
 <pre><code>## Warning: package 'bindrcpp' was built under R version 3.4.2</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max_c</span>(<span class="dv">0</span>, <span class="kw">sqrt</span>(.<span class="dv">5</span>), <span class="dt">y =</span> <span class="dv">4</span>*x)</code></pre></div>
 <pre><code>## [1] 12.828</code></pre>
+<p>Here the function provided calculates the maximum value that is set higher than the maximum value of the probability.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ApproveReject</span>(<span class="dv">0</span>, <span class="kw">sqrt</span>(.<span class="dv">5</span>), <span class="dt">y =</span> <span class="kw">gx</span>(x))</code></pre></div>
 <pre><code>## [1] NA</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(<span class="kw">Replication</span>(<span class="dv">0</span>, <span class="kw">sqrt</span>(.<span class="dv">5</span>), <span class="dt">y =</span> <span class="kw">gx</span>(x)))</code></pre></div>
-<pre><code>##           x
-## 1 0.6650108
-## 2        NA
-## 3        NA
-## 4        NA
-## 5        NA
-## 6        NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(<span class="kw">Replication</span>(<span class="dv">0</span>, <span class="kw">sqrt</span>(.<span class="dv">5</span>), <span class="dt">y =</span> <span class="kw">gx</span>(x))) %&gt;%<span class="st"> </span><span class="kw">rename</span>(<span class="st">&quot;Random Sample&quot;</span> =<span class="st"> &quot;x&quot;</span>)</code></pre></div>
+<pre><code>##   Random Sample
+## 1     0.6650108
+## 2            NA
+## 3            NA
+## 4            NA
+## 5            NA
+## 6            NA</code></pre>
 <p>The utilization of head allows you to take the first few samples after replication. ## Vignette Info</p>
 <p>Note the various macros within the <code>vignette</code> section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the <code>title</code> field and the <code>\VignetteIndexEntry</code> to match the title of your vignette.</p>
 </div>
