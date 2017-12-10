@@ -162,6 +162,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Upper and lower boundaries for provided function, variables, and probability</li>
 <li>Numerical Value for desired amount of replication</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f =<span class="st"> </span>function(x) {<span class="kw">return</span>(<span class="dv">4</span>*x)}
+<span class="kw">Prob</span>(f, <span class="dt">variable =</span> <span class="st">&quot;X&quot;</span>, <span class="dt">upper_boundx =</span> .<span class="dv">5</span>, <span class="dt">upper_boundP =</span> .<span class="dv">3</span>, <span class="dt">lower_boundx =</span> <span class="dv">0</span>, <span class="dt">lower_boundP =</span> <span class="dv">0</span>, <span class="dt">Rep =</span> <span class="dv">10000</span>)</code></pre></div>
+<pre><code>## [1] 0.3733804</code></pre>
+<p>The provided example above shows a basic probability computation with given function, boundaries, varible, replication, and probability density function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f =<span class="st"> </span>function(x) {<span class="kw">return</span>(<span class="dv">1</span>/<span class="dv">2</span>/pi *(<span class="kw">sin</span>(x) +<span class="st"> </span><span class="dv">1</span>))}
+<span class="kw">Prob</span>(f, <span class="dt">variable =</span> <span class="st">&quot;X&quot;</span>, <span class="dt">upper_boundx =</span> <span class="dv">2</span>*pi, <span class="dt">lower_boundP =</span> pi, <span class="dt">lower_boundx =</span> <span class="dv">0</span>, <span class="dt">Rep =</span> <span class="dv">10000</span>)</code></pre></div>
+<pre><code>## [1] 0.1878788</code></pre>
+<p>The provided example above shows another probability computation; however, it demonstrates computating a probability with a sin function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f =<span class="st"> </span>function(x,y) {<span class="kw">return</span>(x+y)}
+<span class="kw">Prob</span>(f, <span class="dt">variable =</span> <span class="st">&quot;XY&quot;</span>, <span class="dt">upper_boundx =</span> <span class="dv">1</span>, <span class="dt">upper_boundy =</span> <span class="dv">1</span>, <span class="dt">upper_boundF =</span> <span class="dv">2</span>, <span class="dt">upper_boundP =</span> .<span class="dv">3</span>, <span class="dt">lower_boundx =</span> <span class="dv">0</span>, <span class="dt">lower_boundy =</span> <span class="dv">0</span>, <span class="dt">lower_boundP =</span> <span class="dv">0</span>, <span class="dt">lower_boundF =</span> <span class="dv">0</span>, <span class="dt">Rep =</span> <span class="dv">10000</span>)</code></pre></div>
+<pre><code>## [1] 0.008636272</code></pre>
+<p>The final example provided above shows a probability computation utilizing a joint density function. Here the boundaries, variable, function, and replication are provided by the user.</p>
 </div>
 
 

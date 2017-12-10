@@ -32,3 +32,15 @@ ExpectedValue(f, "X", lower_boundx = 0, upper_boundx = 2* pi)
 f = function(x,y) {return(x+y)}
 ExpectedValue(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boundF = 2, lower_boundx = 0, lower_boundy = 0, lower_boundF = 0)
 
+## ------------------------------------------------------------------------
+f = function(x) {return(4*x)}
+Prob(f, variable = "X", upper_boundx = .5, upper_boundP = .3, lower_boundx = 0, lower_boundP = 0, Rep = 10000)
+
+## ------------------------------------------------------------------------
+f = function(x) {return(1/2/pi *(sin(x) + 1))}
+Prob(f, variable = "X", upper_boundx = 2*pi, lower_boundP = pi, lower_boundx = 0, Rep = 10000)
+
+## ------------------------------------------------------------------------
+f = function(x,y) {return(x+y)}
+Prob(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boundF = 2, upper_boundP = .3, lower_boundx = 0, lower_boundy = 0, lower_boundP = 0, lower_boundF = 0, Rep = 10000)
+
