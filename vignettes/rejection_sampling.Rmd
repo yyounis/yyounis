@@ -69,4 +69,6 @@ The utilization of head allows you to take the first few samples after replicati
 
 ##Section C) Compute the expected value of $f(X)$ or $f(X,Y)$ given a function $f()$.
 
-The third section of the project focuses on producing an expected outcome for either a probability density function or a joint density function.
+The third section of the project focuses on producing an expected outcome for either a probability density function or a joint density function. Here you must provide us with the following parameters:
+
+- 

@@ -1,7 +1,7 @@
 #' @title ExpectedValue
 #' @author Youssef Younis  <email: youssef.younis@slu.edu>
 #' @description This file aims to produce an Expected Value of a f(x) or f(x,y) given a function f
-#' @param f the PDF provided by the user
+#' @param f the PDF or JDF provided by the user
 #' @param Rep the amount of replication times the user wants, default value is 10000
 #' @param variable provided by user to suggest which variable they want to use between "X" or "XY"
 #' @param upper_boundx The maximum value for the X Variable
