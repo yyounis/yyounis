@@ -76,3 +76,10 @@ The third section of the project focuses on producing an expected outcome for ei
 - Upper and lower boundaries for provided function and variables
 - Numerical Value for desired amount of replication
 
+```{r}
+f = function(x) {return(1/2/pi *(sin(x) + 1))}
+ExpectedValue(f, "X", lower_boundx = 0, upper_boundx = 2* pi)
+```
+
+The provided example above demonstrates the expected outcome for a probabilty density function with the desired variable $x$
+
