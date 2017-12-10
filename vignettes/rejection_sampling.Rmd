@@ -94,3 +94,4 @@ The example above is similar to the first example provided in this section; howe
 
 ```
 
+The final example provided shows the function computing the expected outcome for a joint density function.
