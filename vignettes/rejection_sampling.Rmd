@@ -113,3 +113,11 @@ The final section of the project focuses on producing probabilities given a prob
 - Upper and lower boundaries for provided function, variables, and probability
 - Numerical Value for desired amount of replication
 
+```{r}
+f = function(x) {return(4*x)}
+Prob(f, variable = "X", upper_boundx = .5, upper_boundP = .3, lower_boundx = 0, lower_boundP = 0, Rep = 10000)
+```
+
+The provided example above shows a basic probability computation with given boundaries, replication, and probability density function.
+
+
