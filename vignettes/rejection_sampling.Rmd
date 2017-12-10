@@ -77,9 +77,20 @@ The third section of the project focuses on producing an expected outcome for ei
 - Numerical Value for desired amount of replication
 
 ```{r}
+f = function(x) {return(2*x)}
+ExpectedValue(f, "X", lower_boundx = 0, upper_boundx = 1)
+```
+
+The provided example above demonstrates the expected outcome for a probabilty density function with the desired variable $x$.
+
+```{r}
 f = function(x) {return(1/2/pi *(sin(x) + 1))}
 ExpectedValue(f, "X", lower_boundx = 0, upper_boundx = 2* pi)
 ```
 
-The provided example above demonstrates the expected outcome for a probabilty density function with the desired variable $x$
+The example above is similar to the first example provided in this section; however, it demonstrates computing an expected value with a sin function.
+
+```{r}
+
+```
 
