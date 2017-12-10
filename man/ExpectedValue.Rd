@@ -33,8 +33,6 @@ An Expected Value of a f(x) or f(x,y)
 This file aims to produce an Expected Value of a f(x) or f(x,y) given a function f
 }
 \examples{
-\dontrun {
-
 Example1
 f = function(x) {return(1/2/pi *(sin(x) + 1))}
 ExpectedValue(f, "X", lower_boundx = 0, upper_boundx = 2* pi)
@@ -42,7 +40,7 @@ ExpectedValue(f, "X", lower_boundx = 0, upper_boundx = 2* pi)
 Example2
 f = function(x,y) {return(x+y)}
 ExpectedValue(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boundF = 2,
-lower_boundx = 0, lower_boundy = 0, lower_boundF = 0)}
+lower_boundx = 0, lower_boundy = 0, lower_boundF = 0)
 
 }
 \author{

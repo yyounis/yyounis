@@ -37,7 +37,6 @@ A probability related to X or X and Y
 This file aims to produce a Probability of an X or an X and Y
 }
 \examples{
-\dontrun {
 Example1
 f = function(x) {return(4*x)}
 Prob(f, variable = "X", upper_boundx = .5, upper_boundP = .3, lower_boundx = 0, lower_boundP = 0, Rep = 10000)
@@ -49,7 +48,7 @@ Prob(f, variable = "X", upper_boundx = 2*pi, upper_boundP = 2*pi, lower_boundP =
 Example3
 f = function(x,y) {return(x+y)}
 Prob(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boundF = 2, upper_boundP = 1, lower_boundx = 0, lower_boundy = 0, lower_boundF = 0, Rep = 10000)
-}
+
 
 }
 \author{
