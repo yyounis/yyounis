@@ -11,10 +11,8 @@ ApproveReject(0, sqrt(.5), y = gx(x))
 ## ------------------------------------------------------------------------
 head(Replication(0, sqrt(.5), y = gx(x))) %>% rename("Random Sample" = "x")
 
-## ---- fig.show='hold'----------------------------------------------------
-plot(1:10)
-plot(10:1)
-
-## ---- echo=FALSE, results='asis'-----------------------------------------
-knitr::kable(head(mtcars, 10))
+## ------------------------------------------------------------------------
+gx = function(x,y){
+return (x+y)}
+head(SampleJDF(0, 0, 1, 1, 0, 2, gx)) %>% rename("Random Sample X-Coordinate" = "x", "Random Sample Y-Coordinate" = "y")
 

@@ -8,7 +8,7 @@ ExpectedValue(f, variable, upper_boundx, upper_boundy, upper_boundF,
   lower_boundx, lower_boundy, lower_boundF, Rep = 10000)
 }
 \arguments{
-\item{f}{the PDF provided by the user}
+\item{f}{the PDF or JDF provided by the user}
 
 \item{variable}{provided by user to suggest which variable they want to use between "X" or "XY"}
 

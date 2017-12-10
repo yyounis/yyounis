@@ -71,4 +71,8 @@ The utilization of head allows you to take the first few samples after replicati
 
 The third section of the project focuses on producing an expected outcome for either a probability density function or a joint density function. Here you must provide us with the following parameters:
 
-- 
+- User provided joint density function or probability function
+- Desired Variables whether it be the character of $X$ or $XY$
+- Upper and lower boundaries for provided function and variables
+- Numerical Value for desired amount of replication
+
