@@ -103,3 +103,13 @@ ExpectedValue(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boun
 ```
 
 The final example provided shows the function computing the expected outcome for a joint density function.
+
+##Section D) Compute probabilities related to $X$ or $X$ and $Y$.
+
+The final section of the project focuses on producing probabilities given a probability density function or a joint density function. Here you must provide us with the following paramaters:
+
+- User provided joint density function or probability function
+- Desired Variables whether it be the character of $X$ or $XY$
+- Upper and lower boundaries for provided function, variables, and probability
+- Numerical Value for desired amount of replication
+
