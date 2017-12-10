@@ -91,7 +91,8 @@ ExpectedValue(f, "X", lower_boundx = 0, upper_boundx = 2* pi)
 The example above is similar to the first example provided in this section; however, it demonstrates computing an expected value with a sin function.
 
 ```{r}
-
+f = function(x,y) {return(x+y)}
+ExpectedValue(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boundF = 2, lower_boundx = 0, lower_boundy = 0, lower_boundF = 0)
 ```
 
 The final example provided shows the function computing the expected outcome for a joint density function.
