@@ -23,6 +23,7 @@ return(Sample1)
 }
 
 #Function Providing "C" Value for Rejection Sampling
+#' @export
 max_c <- function(lower_bound, upper_bound, y = gx)
 {X <- seq(lower_bound, upper_bound, .001)
 Y <- gx(X)
