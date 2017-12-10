@@ -1,6 +1,10 @@
 ## ------------------------------------------------------------------------
+library(Project4800)
+
+## ---- include=FALSE------------------------------------------------------
 set.seed(123)
-library(dplyr)
+suppressMessages(library(dplyr))
+suppressMessages(library(Project4800))
 gx <- function(x){return(4*x)}
 SpecificSample <- mutate(data.frame( x = seq(0, sqrt(.5), .01)), y = gx(x))
 max_c(0, sqrt(.5), y = 4*x)

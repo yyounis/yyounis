@@ -24,6 +24,12 @@ The Rejection Sample Package calculates you the following:
 
 This package was developed as a optional project for a required Probability Theory course 4800 Probability Theory. This course is taught at Saint Louis University by Dr. Darren Speegle <speegled@slu.edu>.
 
+##Installation of Package
+
+```{r}
+library(Project4800)
+```
+
 
 ##Section A) Sample from $X$ given its probability density function
 
@@ -34,8 +40,8 @@ The initial section to the project focuses on receiving a random sample from a p
 
 ```{r, include=FALSE}
 set.seed(123)
-library(dplyr)
-library(Project4800)
+suppressMessages(library(dplyr))
+suppressMessages(library(Project4800))
 gx <- function(x){return(4*x)}
 SpecificSample <- mutate(data.frame( x = seq(0, sqrt(.5), .01)), y = gx(x))
 max_c(0, sqrt(.5), y = 4*x)
