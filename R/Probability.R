@@ -73,4 +73,4 @@ Prob(f, variable = "X", upper_boundx = 2*pi, lower_boundP = pi, lower_boundx = 0
 
 #Example3
 f = function(x,y) {return(x+y)}
-Prob(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boundF = 2, upper_boundP = 1, lower_boundx = 0, lower_boundy = 0, lower_boundP = 0, lower_boundF = 0, Rep = 10000)
+Prob(f, variable = "XY", upper_boundx = 1, upper_boundy = 1, upper_boundF = 2, upper_boundP = .3, lower_boundx = 0, lower_boundy = 0, lower_boundP = 0, lower_boundF = 0, Rep = 10000)

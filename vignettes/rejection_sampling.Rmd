@@ -56,6 +56,11 @@ The utilization of head allows you to take the first few samples after replicati
 
 The second section of this project focuses on receiving a random sample from a joint density function. Here you must provide the following:
 
+  - The joint density function for your desired variables
+  - The upper and lower boundaries for your joint density functions and variables
+  
+
+
 
 ## Vignette Info
 
